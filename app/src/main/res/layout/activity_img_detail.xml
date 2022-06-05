@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ImgDetailActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@drawable/shape_toolbar02">
+
+    <ImageButton
+        android:id="@+id/backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back_white"
+        android:layout_marginStart="10dp"
+        android:background="@android:color/transparent"
+        android:layout_centerVertical="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Notes Detail"
+        android:layout_centerInParent="true"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbarRl"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:id="@+id/imgRl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/titleTv"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Judul Catatan"/>
+
+
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                 <TableRow>
+
+                     <TextView
+                         android:id="@+id/categoryLabelTv"
+                         android:layout_width="wrap_content"
+                         style="@style/TextAppearance.AppCompat.Caption"
+                         android:layout_height="wrap_content"
+                         android:text="Category"
+                         android:layout_marginEnd="5dp"/>
+
+                     <TextView
+                         android:id="@+id/categoryTv"
+                         android:layout_weight="1"
+                         style="@style/TextAppearance.AppCompat.Caption"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="N/A"
+                         android:layout_marginEnd="5dp"/>
+
+                 </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/dateLabelTv"
+                        android:layout_width="wrap_content"
+                        style="@style/TextAppearance.AppCompat.Caption"
+                        android:layout_height="wrap_content"
+                        android:text="Date"
+                        android:layout_marginEnd="5dp"/>
+
+                    <TextView
+                        android:id="@+id/dateTv"
+                        android:layout_weight="1"
+                        style="@style/TextAppearance.AppCompat.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="N/A"
+                        android:layout_marginEnd="5dp"/>
+
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/descriptionTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="Isi Catatan"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
